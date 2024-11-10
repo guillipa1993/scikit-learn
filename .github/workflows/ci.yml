@@ -14,9 +14,10 @@ jobs:
     with:
       language: 'python'
       python-version: '3.9'  
-      project-path: '.binder'
-      build-configuration: 'Release'
-      build-command: 'make dev'
+      project-path: '.binder'  
+      build-configuration: 'Release'  
+      additional-install-commands: 'pip install mesonpy meson' 
+      build-command: 'make dev'  
       run-tests: true
       run-check-code-format: true
       run-code-analysis: true
@@ -24,4 +25,4 @@ jobs:
       run-upload-coverage: true
       run-lint: true
       run-clean-up: true
-      environment-variables: ''
+      environment-variables: '' 
