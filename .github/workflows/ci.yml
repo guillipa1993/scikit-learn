@@ -18,8 +18,8 @@ jobs:
       build-configuration: 'Release'
       additional-install-commands: |
         pip install --upgrade pip setuptools wheel
-        pip install meson meson-python  
-      build-command: 'make dev'  
+        pip install meson meson-python cython numpy scipy
+      build-command: 'pip install .'  
       run-tests: true
       run-check-code-format: true
       run-code-analysis: true
