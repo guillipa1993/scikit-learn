@@ -13,8 +13,8 @@ jobs:
     uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/python-ci.yml@main
     with:
       language: 'python'
-      python-version: '3.9'
-      project-path: ''
+      python-version: '3.9'  
+      project-path: '.binder'  
       build-configuration: ''
       additional-install-commands: ''
       run-tests: true
@@ -24,4 +24,4 @@ jobs:
       run-upload-coverage: true
       run-lint: true
       run-clean-up: true
-      environment-variables: '.binder/requirements.txt'
+      environment-variables: ''
