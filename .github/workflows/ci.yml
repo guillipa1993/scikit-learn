@@ -14,9 +14,9 @@ jobs:
     with:
       language: 'python'
       python-version: '3.9'  
-      project-path: '.binder'  
-      build-configuration: ''
-      additional-install-commands: ''
+      project-path: '.binder'
+      build-configuration: 'Release'
+      build-command: 'make dev'
       run-tests: true
       run-check-code-format: true
       run-code-analysis: true
