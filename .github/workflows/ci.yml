@@ -15,7 +15,7 @@ jobs:
       language: 'python'
       python-version: '3.9'
       project-path: ''
-      requirements-path: '.binder'
+      requirements-path: '.binder/'
       build-configuration: 'Release'
       additional-install-commands: |
         pip install --upgrade pip setuptools wheel
