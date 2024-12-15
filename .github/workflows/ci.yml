@@ -11,10 +11,6 @@ on:
 jobs:
   ci-pipeline:
     uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/python-ci.yml@main
-    secrets:
-      azure-account-name: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
-      azure-account-key: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
-      openai-api-key: ${{ secrets.OPENAI_API_KEY }}
     with:
       language: 'python'
       python-version: '3.9'
@@ -33,3 +29,7 @@ jobs:
       run-lint: true
       run-clean-up: true
       environment-variables: ''
+    env:
+      azure-account-name: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
+      azure-account-key: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
+      openai-api-key: ${{ secrets.OPENAI_API_KEY }}
