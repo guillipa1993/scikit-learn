@@ -1,4 +1,4 @@
-name: "CI/CD Pipeline for Python" #Change to test pipeline 4
+name: "CI/CD Pipeline for Python"
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       additional-install-commands: |
         pip install --upgrade pip setuptools wheel
         pip install meson meson-python cython numpy scipy
-      build-command: 'pip install .'  
+      build-command: 'pip install .'
       run-tests: true
       run-check-code-format: true
       run-code-analysis: true
@@ -29,7 +29,6 @@ jobs:
       run-lint: true
       run-clean-up: true
       environment-variables: ''
-    env:
-      azure-account-name: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
+      azure-account-name: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} 
       azure-account-key: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
       openai-api-key: ${{ secrets.OPENAI_API_KEY }}
