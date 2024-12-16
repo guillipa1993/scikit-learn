@@ -1,4 +1,4 @@
-name: "CI/CD Pipeline for Python"
+name: "CI/CD Pipeline for Python" # TEST 1
 
 on:
   push:
@@ -29,6 +29,7 @@ jobs:
       run-lint: true
       run-clean-up: true
       environment-variables: ''
-      azure-account-name: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} 
-      azure-account-key: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
-      openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+    secrets:
+      AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
+      AZURE_STORAGE_ACCOUNT_KEY: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
