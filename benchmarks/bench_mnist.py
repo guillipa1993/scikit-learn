@@ -48,6 +48,9 @@ from sklearn.svm import LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.utils import check_array
 
+# Introduce un error de importación
+# import nonexistent_module  # Provoca un error de ImportError
+
 # Memoize the data extraction and memory map the resulting
 # train / test splits in readonly mode
 memory = Memory(os.path.join(get_data_home(), "mnist_benchmark_data"), mmap_mode="r")
@@ -60,8 +63,15 @@ def load_data(dtype=np.float32, order="F"):
     # Load dataset
     print("Loading dataset...")
     data = fetch_openml("mnist_784", as_frame=True)
+    
+    # Introduce un error en los datos
+    # X = "invalid data"  # Datos con un tipo incorrecto
+
     X = check_array(data["data"], dtype=dtype, order=order)
     y = data["target"]
+
+    # Introducir valores NaN
+    # X[np.random.choice(X.shape[0], size=10), :] = np.nan  # Añade valores NaN aleatorios
 
     # Normalize features
     X = X / 255
@@ -113,6 +123,8 @@ ESTIMATORS = {
     ),
 }
 
+# Eliminar un clasificador clave
+# ESTIMATORS.pop("ExtraTrees", None)  # Esto provocará un KeyError si se intenta usar
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -197,6 +209,10 @@ if __name__ == "__main__":
 
         if "n_jobs" in estimator_params:
             estimator.set_params(n_jobs=args["n_jobs"])
+
+        # Simular fallo al entrenar un modelo
+        if name == "ExtraTrees":
+            raise RuntimeError("Forced failure during ExtraTrees training.")  # Error intencional
 
         time_start = time()
         estimator.fit(X_train, y_train)
