@@ -22,13 +22,9 @@ jobs:
         pip install --upgrade pip setuptools wheel
         pip install meson meson-python cython numpy scipy
       build-command: 'pip install .'
-      run-tests: true
       run-check-code-format: true
       run-code-analysis: true
-      run-build-artifact: true
-      run-upload-coverage: true
       run-lint: true
-      run-clean-up: true
       environment-variables: ''
     secrets:
       AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
