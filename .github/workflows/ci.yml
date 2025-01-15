@@ -25,8 +25,10 @@ jobs:
       run-check-code-format: true
       run-code-analysis: true
       run-lint: true
+      run-snyk: true
       environment-variables: ''
     secrets:
       AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
       AZURE_STORAGE_ACCOUNT_KEY: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
