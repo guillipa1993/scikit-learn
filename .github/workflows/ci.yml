@@ -16,7 +16,7 @@ jobs:
       language: 'python'
       python-version: '3.9'
       report-language: 'Spanish'
-      project-path: ''
+      project-path: '.'
       requirements-path: '.binder/'
       build-configuration: 'Release'
       additional-install-commands: |
