@@ -1,5 +1,3 @@
---find-links https://pypi.anaconda.org/scientific-python-nightly-wheels/simple/scikit-learn
---pre
 matplotlib
 scikit-image
 pandas
