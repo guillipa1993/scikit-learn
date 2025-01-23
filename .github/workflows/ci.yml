@@ -28,8 +28,12 @@ jobs:
       run-lint: true
       run-snyk: true
       environment-variables: ''
+      jira-url: 'https://guillipa1993.atlassian.net/'
+      jira-project-key: 'SQLI'
     secrets:
       AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
       AZURE_STORAGE_ACCOUNT_KEY: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      JIRA_CLOUD_USERNAME: ${{ secrets.JIRA_CLOUD_USERNAME }}
+      JIRA_CLOUD_API_TOKEN: ${{ secrets.JIRA_CLOUD_API_TOKEN }}
