@@ -1,4 +1,4 @@
-name: "CI/CD Pipeline for Python" # Change to run new job
+name: "CI/CD Pipeline for Python"
 
 on:
   push:
