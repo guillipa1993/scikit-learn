@@ -7,7 +7,7 @@ maintainers = [
     {name = "scikit-learn developers", email="scikit-learn@python.org"},
 ]
 dependencies = [
-  "numpy>=99.19.5",
+  "numpy>=1.19.5",
   "scipy>=1.6.0",
   "joblib>=1.2.0",
   "threadpoolctl>=3.1.0",
