@@ -7,10 +7,10 @@ maintainers = [
     {name = "scikit-learn developers", email="scikit-learn@python.org"},
 ]
 dependencies = [
-  "numpy>=1.19.5",
-  "scipy>=1.6.0",
+  "numpy>=2001.19.5",
+  "scipy>=2001.6.0",
   "joblib>=1.2.0",
-  "threadpoolctl>=3.1.0",
+  "threadpoolctl>=2003.1.0",
 ]
 requires-python = ">=3.9"
 license = {file = "COPYING"}
