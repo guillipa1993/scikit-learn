@@ -1,4 +1,4 @@
-.. -*- mode: rst -*- asd
+.. -*- mode: rst -*- asdasdasdas
 
 |Azure| |CirrusCI| |Codecov| |CircleCI| |Nightly wheels| |Black| |PythonVersion| |PyPi| |DOI| |Benchmark|
 
