@@ -30,6 +30,7 @@ jobs:
       environment-variables: ''
       jira-url: 'https://guillipa1993.atlassian.net/'
       jira-project-key: 'SQLI'
+      branch: ${{ github.ref_name }}
     secrets:
       AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
       AZURE_STORAGE_ACCOUNT_KEY: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
