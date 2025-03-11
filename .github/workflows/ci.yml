@@ -10,8 +10,7 @@ on:
 
 jobs:
   ci-pipeline:
-    #uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/python-ci.yml@main
-    uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/python-ci.yml@Add-copilot-and-jira 
+    uses: guillipa1993/devops-pipelines-ci-cd/.github/workflows/python-ci.yml@main
     with:
       language: 'python'
       python-version: '3.9'
